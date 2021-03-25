@@ -1,0 +1,52 @@
+
+
+<div class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{oneCiudad.nombre}}</h5>
+          <p class="card-text">{{oneCiudad.pais}}</p>
+          <p class="card-text">{{oneCiudad.codigo}}</p>
+        </div>
+      </div>
+    </div>
+</div>
+<form>
+    <div class="form-group">
+        <label for="inputAddress">Introduce la ciudad</label>
+        <input type="text" class="form-control" placeholder="Codigo"  #codigo>
+    </div>
+    <button type="button" on-click="mostrarUno(codigo.value)" class="btn btn-primary">Mostrar Uno</button>
+</form>
+<button type="button" on-click="mostrarCiudades()" class="btn btn-primary">Mostrar</button>
+<div *ngFor="let ciudades of mostrar let i = index" class="row">
+    <div class="col-sm-6">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{mostrar[i].nombre}}</h5>
+          <p class="card-text">{{mostrar[i].pais}}</p>
+          <p class="card-text">{{mostrar[i].codigo}}</p>
+        </div>
+      </div>
+    </div>
+</div>
+
+
+<!-- <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Ciudad</th>
+        <th scope="col">Pais</th>
+        <th scope="col">Codigo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th  scope="row"></th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+</table> -->

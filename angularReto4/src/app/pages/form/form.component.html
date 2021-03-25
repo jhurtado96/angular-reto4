@@ -1,0 +1,29 @@
+<form>
+    <div class="form-group">
+        <label for="inputAddress">Ciudad</label>
+        <input type="text" class="form-control" placeholder="Ciudad"  #ciudad>
+    </div>
+    <div class="form-group">
+        <label for="inputAddress2">Pais</label>
+        <input type="text" class="form-control" placeholder="Pais"  #pais>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputCity">Codigo</label>
+            <input type="text" class="form-control" placeholder="Codigo aeropuerto"  #codigo>
+        </div>
+
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-2">
+            <button on-click="meterCiudad(ciudad.value,pais.value,codigo.value)" type="button" class="btn btn-primary">Añadir</button>
+        </div>
+        <div class="form-group col-md-2">
+        <button  on-click="editarCiudad(ciudad.value,pais.value,codigo.value)" type="button" class="btn btn-primary">Editar</button>
+    </div>
+    <div class="form-group col-md-2">
+    <button on-click="borrarCiudad(codigo.value)" type="button" class="btn btn-primary">Borrar</button>
+    </div>
+
+</div>
+</form>
